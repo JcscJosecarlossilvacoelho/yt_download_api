@@ -16,8 +16,6 @@ app.post('/download', async (req, res) => {
     const {url} = req.body
     const downloadVideoController = Container.get<DownloadVideoController>(DownloadVideoController);
     const result = await downloadVideoController.Get(url)
-    console.log('AQUI ENTROU')
-    console.log(result)
     res.send(result)
   })
   
